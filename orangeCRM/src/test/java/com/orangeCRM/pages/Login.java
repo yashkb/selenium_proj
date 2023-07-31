@@ -15,17 +15,17 @@ public class Login {
 		this.driver = d;
 	}
 	
-	public void enterUserName()
+	public void enterUserName(String userId)
 	{
 		WebElement userName = driver.findElement(By.xpath("//input[@name='username']"));
-		String userId = "admin";
+		
 		userName.sendKeys(userId);
 		
 	}
-	public void enterPassword()
+	public void enterPassword(String pass)
 	{
 		WebElement password = driver.findElement(By.xpath("//input[@name='password']"));
-		password.sendKeys("admin123");
+		password.sendKeys(pass);
 	}
 	public void clickLogin()
 	{

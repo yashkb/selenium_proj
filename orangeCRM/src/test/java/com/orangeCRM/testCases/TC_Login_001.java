@@ -14,9 +14,14 @@ public class TC_Login_001 extends BaseClass {
 		loginObj  = new Login(driver);
 		driver.get(url);
 		Thread.sleep(3000);
-		loginObj.enterUserName();
-		loginObj.enterPassword();
+		String userId = "admin";
+		loginObj.enterUserName(userId);
+		String password = "admin123";
+		loginObj.enterPassword(password);
 		loginObj.clickLogin();
 	}
+	
+	
+	
 
 }
