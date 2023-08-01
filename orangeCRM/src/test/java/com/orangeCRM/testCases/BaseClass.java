@@ -13,6 +13,7 @@ public class BaseClass {
 	{
 		System.setProperty("webdriver.chrome.driver", ".\\drivers\\chromedriver.exe");   
 		driver = new ChromeDriver();
+		driver.get(url);
 	}
 	
 	public void tearDown()

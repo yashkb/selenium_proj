@@ -12,10 +12,10 @@ public class TC_Login_001 extends BaseClass {
 	void validLogin() throws InterruptedException
 	{
 		loginObj  = new Login(driver);
-		driver.get(url);
+		
 		Thread.sleep(3000);
 		System.out.println("hello Yash KB");
-		System.out.println("New testing for automatic trigger");
+		System.out.println("using Poll SCM");
 		String userId = "admin";
 		loginObj.enterUserName(userId);
 		String password = "admin123";
