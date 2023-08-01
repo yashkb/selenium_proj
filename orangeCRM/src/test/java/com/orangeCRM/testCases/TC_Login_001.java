@@ -15,6 +15,7 @@ public class TC_Login_001 extends BaseClass {
 		driver.get(url);
 		Thread.sleep(3000);
 		System.out.println("hello Yash KB");
+		System.out.println("New testing for automatic trigger");
 		String userId = "admin";
 		loginObj.enterUserName(userId);
 		String password = "admin123";
