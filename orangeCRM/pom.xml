@@ -74,6 +74,11 @@
                 <suiteXmlFiles>
                     <suiteXmlFile>testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
+                 <systemPropertyVariables>
+                    <!-- Headless Chrome Options -->
+                    <headless>true</headless>
+                    <webdriver.chrome.driver>/drivers/chromedriver</webdriver.chrome.driver>
+                </systemPropertyVariables>
             </configuration>
         </plugin>
         <plugin>
