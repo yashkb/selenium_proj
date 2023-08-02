@@ -5,6 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Homepage {
 	
@@ -16,10 +18,7 @@ public class Homepage {
 		this.driver = d;
 		
 	}
-	public void openWebsite()
-	{
-		driver.get(url);
-	}
+	
 	public void clickHamburger() throws InterruptedException
 	{
 		
@@ -37,11 +36,20 @@ public class Homepage {
 		closeBtn.click();
 	}
 	
-	public void checkLanguage() throws InterruptedException
+	public boolean checkLanguage() throws InterruptedException
 	{
-		Thread.sleep(6000);
-		WebElement enBtn = driver.findElement(By.id("icp-nav-flyout"));
-		enBtn.click();
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebElement languageButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("icp-nav-flyout")));
+        languageButton.click();
+        WebElement kannadaRadioButton = driver.findElement(By.xpath("//input[@value='kn_IN']"));
+        boolean isKannadaSelected = kannadaRadioButton.isSelected();
+
+        if (isKannadaSelected) {
+            return true;
+        }
+        return false;
+        
+        
 	}
 
 }

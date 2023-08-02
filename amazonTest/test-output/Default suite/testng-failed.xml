@@ -5,8 +5,8 @@
     <classes>
       <class name="amazon.testCases.TC_HomePage_001">
         <methods>
-          <include name="Language"/>
           <include name="setUp"/>
+          <include name="language"/>
         </methods>
       </class> <!-- amazon.testCases.TC_HomePage_001 -->
     </classes>
